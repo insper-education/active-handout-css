@@ -1,0 +1,118 @@
+.figure {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.combobox {
+  padding: 0.4rem;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.css-code-viewer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.1rem;
+}
+
+.css-code-block-container {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+}
+
+.css-code-block-container .success-check {
+  position: absolute;
+  z-index: 1;
+  font-size: 2rem;
+  color: #00c853;
+  right: 10px;
+  display: none;
+}
+
+.css-exercise.success .css-code-block-container .success-check {
+  display: inherit;
+}
+
+.css-code-viewer .code-block {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.box-title {
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+  width: max-content;
+}
+
+.eye-on,
+.eye-off {
+  display: none;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.code-block.hide-lines .eye-off {
+  display: inline;
+}
+
+.code-block.show-lines .eye-on {
+  display: inline;
+}
+
+.box-title.tab {
+  margin-bottom: 0;
+  padding: 0.2rem 0.4rem;
+  background-color: #eceff9;
+  border-radius: 5px 5px 0 0;
+}
+
+.css-code-viewer .code-block pre {
+  flex-grow: 1;
+  overflow-x: scroll;
+  margin-top: 0;
+  border-right: 1px solid white;
+  padding: 1rem;
+  background-color: #eceff9;
+  color: #252629;
+}
+
+.style-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.code-input {
+  font-family: monospace;
+  border-radius: 5px;
+  border: 1px solid #eceff9;
+}
+
+textarea.code-input {
+  min-width: 90%;
+  min-height: 5rem;
+}
+
+.html-preview {
+  width: 50%;
+}
+
+@media screen and (max-width: 640px) {
+  .css-code-viewer {
+    flex-direction: column;
+  }
+
+  .css-code-viewer .code-block {
+    width: 100%;
+  }
+
+  .html-preview {
+    width: 100%;
+  }
+
+  .style-container {
+    flex-direction: column;
+  }
+}

@@ -308,6 +308,13 @@ textarea.code-input {
   width: 50%;
 }
 
+img.contributor-picture {
+  max-height: 4rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
 @media screen and (max-width: 640px) {
   .css-code-viewer {
     flex-direction: column;

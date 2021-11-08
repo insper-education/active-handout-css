@@ -322,11 +322,45 @@ textarea.code-input {
   width: 50%;
 }
 
-img.contributor-picture {
-  max-height: 4rem;
-  vertical-align: middle;
-  margin-right: 1rem;
-  margin-left: 1rem;
+.contributor-list p {
+  opacity: 0.75;
+  margin-bottom: 0.1rem;
+}
+
+.contributor-list ul {
+  display: flex;
+  list-style: none;
+}
+
+.contributor-list ul li {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.contributor-list img.contributor-picture {
+  max-height: 3rem;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+.contributor-list img.contributor-picture:hover {
+  filter: grayscale(0);
+}
+
+.contributor-list .no-contributor-picture svg {
+  background-color: #f0f0f0;
+}
+
+.contributor-list .no-contributor-picture {
+  color: #a0a0a0;
+}
+
+.contributor-list .no-contributor-picture:hover {
+  color: inherit;
+}
+
+hr.content-footer-sep {
+  margin-top: 8rem;
 }
 
 @media screen and (max-width: 640px) {

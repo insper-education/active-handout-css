@@ -380,3 +380,8 @@ hr.content-footer-sep {
     flex-direction: column;
   }
 }
+
+.user__container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

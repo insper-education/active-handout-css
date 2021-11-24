@@ -146,6 +146,21 @@ html .md-typeset details > :last-child {
   margin-bottom: 1.2rem;
 }
 
+.md-footer-copyright {
+  font-size: 0.8rem;
+}
+
+.md-footer-copyright .extra-footer {
+  display: flex;
+  align-items: center;
+}
+
+.md-footer-copyright .extra-footer a[href*="creativecommons"] {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
 .md-typeset .md-typeset__table.full-width {
   width: 100%;
 }

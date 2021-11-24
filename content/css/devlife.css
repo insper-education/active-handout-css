@@ -5,9 +5,10 @@
   --md-primary-fg-color--dark: #145351;
 
   /* Accent color shades */
-  --md-primary-fg-color--dark: #;
   --md-accent-fg-color: #27a5a2;
   --md-accent-fg-color--transparent: #27a5a21a;
+
+  --md-table-row-color: #efefef;
   font-size: 16px;
   line-height: 1.6667;
 }
@@ -143,6 +144,52 @@ body {
 html .md-typeset .admonition > :last-child,
 html .md-typeset details > :last-child {
   margin-bottom: 1.2rem;
+}
+
+.md-typeset .md-typeset__table.full-width {
+  width: 100%;
+}
+
+.md-typeset .md-typeset__table {
+  margin: 1rem auto 1.5rem;
+}
+
+.md-typeset .md-typeset__table table {
+  font-size: 0.9rem;
+  border: 0.05rem solid var(--md-default-fg-color);
+}
+
+.md-typeset .table-alternating tbody tr:nth-child(even) {
+  background-color: var(--md-table-row-color);
+}
+
+.md-typeset .table-alternating-cols td:nth-child(even) {
+  background-color: var(--md-table-row-color);
+}
+
+.md-typeset table.table-compact tr {
+  padding: 0 0.5rem;
+}
+
+.md-typeset table.table-compact td {
+  padding: 0.5rem;
+}
+
+.md-typeset table.table-centered td {
+  text-align: center;
+}
+
+.md-typeset table.table-row-col-header th {
+  background-color: var(--md-table-row-color);
+}
+
+.md-typeset table.table-last-col-total td:last-child,
+.md-typeset table.table-last-col-total th:last-child {
+  font-weight: bold;
+}
+
+.md-typeset table.table-same-width {
+  table-layout: fixed;
 }
 
 @media screen and (max-width: 55rem) {

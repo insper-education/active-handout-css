@@ -73,7 +73,7 @@ body {
   color: #404040;
   border-bottom: 1px solid #404040;
   font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 1.5rem;
@@ -85,7 +85,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 2rem 0 1rem;
+  margin: 4rem 0 1rem;
 }
 
 .md-typeset p {
@@ -113,10 +113,8 @@ body {
 
 .md-typeset .admonition,
 .md-typeset details {
-  font-size: 0.9rem;
-  border-left: none;
-  border-bottom: 0.02rem solid #448aff;
-  margin: 2rem 0;
+  font-size: 1rem;
+  margin: 3rem 0;
   padding: 0 2rem;
 }
 
@@ -130,8 +128,8 @@ body {
 .md-typeset .admonition-title:before,
 .md-typeset summary:before {
   left: 2rem;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .md-typeset summary:after {
@@ -220,13 +218,12 @@ html .md-typeset details > :last-child {
 
   .md-typeset .admonition,
   .md-typeset details {
-    margin: 1rem 0;
     padding: 0 1rem;
   }
 
   .md-typeset .admonition-title,
   .md-typeset summary {
-    margin: 0 -2rem 1rem -3.2rem;
+    margin: 0 -2rem 1rem -2.2rem;
   }
 
   .md-typeset .admonition .admonition {

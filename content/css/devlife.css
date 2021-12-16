@@ -11,6 +11,9 @@
   --md-table-row-color: #efefef;
   font-size: 16px;
   line-height: 1.6667;
+
+  /* Admonition solved */
+  --md-admonition-icon--solved: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg>');
 }
 
 body {
@@ -452,3 +455,21 @@ hr.content-footer-sep {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+/* Begin admonition solved */
+.md-typeset .admonition.solved,
+.md-typeset details.solved {
+  border-color: #9e9e9e;
+}
+.md-typeset .solved > .admonition-title,
+.md-typeset .solved > summary {
+  background-color: hsla(0, 0%, 62%, 0.1);
+  border-color: #9e9e9e;
+}
+.md-typeset .solved > .admonition-title::before,
+.md-typeset .solved > summary::before {
+  background-color: #9e9e9e;
+  -webkit-mask-image: var(--md-admonition-icon--solved);
+  mask-image: var(--md-admonition-icon--solved);
+}
+/* End admonition solved */

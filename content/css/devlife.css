@@ -14,6 +14,13 @@
 
   /* Admonition solved */
   --md-admonition-icon--solved: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg>');
+  
+  /* Contributor card */
+  --contributor-card-size: 7.5rem;
+  --contributor-card-size--hover: 8rem;
+  --contributor-card-color-1: #009491;
+  --contributor-card-color-2: #3cbfae;
+  --contributor-card-text: #faa61a;
 }
 
 body {
@@ -392,43 +399,6 @@ textarea.code-input {
   width: 50%;
 }
 
-.contributor-list p {
-  opacity: 0.75;
-  margin-bottom: 0.1rem;
-}
-
-.contributor-list ul {
-  display: flex;
-  list-style: none;
-}
-
-.contributor-list ul li {
-  margin-right: 0.5rem;
-  margin-left: 0;
-}
-
-.contributor-list img.contributor-picture {
-  max-height: 3rem;
-  filter: grayscale(100%);
-  transition: filter 0.2s ease;
-}
-
-.contributor-list img.contributor-picture:hover {
-  filter: grayscale(0);
-}
-
-.contributor-list .no-contributor-picture svg {
-  background-color: #f0f0f0;
-}
-
-.contributor-list .no-contributor-picture {
-  color: #a0a0a0;
-}
-
-.contributor-list .no-contributor-picture:hover {
-  color: inherit;
-}
-
 hr.content-footer-sep {
   margin-top: 8rem;
 }
@@ -473,3 +443,112 @@ hr.content-footer-sep {
   mask-image: var(--md-admonition-icon--solved);
 }
 /* End admonition solved */
+
+/* Start ontributors */
+.md-typeset ul.contributor-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0 4rem;
+  padding: 0;
+}
+
+.md-typeset ul li.contributor {
+  position: relative;
+  list-style: none;
+  width: var(--contributor-card-size);
+  height: var(--contributor-card-size);
+  margin: 0.5rem 1rem 0.5rem 0;
+  padding: 0;
+}
+
+.md-typeset ul li.contributor .contributor-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.1rem;
+  width: var(--contributor-card-size);
+  height: var(--contributor-card-size);
+  background: linear-gradient(
+    to top,
+    var(--contributor-card-color-2),
+    var(--contributor-card-color-1)
+  );
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 4px 4px 6px 0px rgba(61, 61, 61, 0.4);
+  -moz-box-shadow: 4px 4px 6px 0px rgba(61, 61, 61, 0.4);
+  box-shadow: 4px 4px 6px 0px rgba(61, 61, 61, 0.4);
+}
+
+.md-typeset ul li.contributor .contributor-content:hover {
+  position: absolute;
+  top: calc(
+    (var(--contributor-card-size) - var(--contributor-card-size--hover)) / 2
+  );
+  left: calc(
+    (var(--contributor-card-size) - var(--contributor-card-size--hover)) / 2
+  );
+  width: var(--contributor-card-size--hover);
+  height: var(--contributor-card-size--hover);
+  -webkit-box-shadow: 8px 8px 6px 0px rgba(61, 61, 61, 0.4);
+  -moz-box-shadow: 8px 8px 6px 0px rgba(61, 61, 61, 0.4);
+  box-shadow: 8px 8px 6px 0px rgba(61, 61, 61, 0.4);
+}
+
+.contributor-avatar {
+  filter: grayscale(1) brightness(1.5);
+  mix-blend-mode: color-burn;
+}
+
+.contributor-content:hover .contributor-avatar {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.contributor-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--contributor-card-size);
+  height: calc(var(--contributor-card-size) / 2);
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 0.8;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: var(--contributor-card-text);
+  transition: all 0.5s ease;
+  background: linear-gradient(to top, #1d1d1d, #adadad00);
+  text-align: right;
+}
+
+.contributor-content:hover .contributor-name {
+  font-size: 1rem;
+  bottom: 0;
+  width: var(--contributor-card-size--hover);
+  height: calc(var(--contributor-card-size--hover) / 2);
+  color: var(--contributor-card-text);
+  mix-blend-mode: normal;
+}
+
+.contributor-name span {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+@media screen and (max-width: 60rem) {
+  .contributor-content .contributor-avatar {
+    filter: none;
+    mix-blend-mode: normal;
+  }
+
+  .contributor-content .contributor-name {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    top: auto;
+    bottom: 0;
+    background: #3c3c3c;
+    color: var(--contributor-card-text);
+    mix-blend-mode: normal;
+  }
+}
+/* End contributors */

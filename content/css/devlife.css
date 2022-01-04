@@ -12,9 +12,9 @@
   font-size: 16px;
   line-height: 1.6667;
 
-  /* Admonition solved */
-  --md-admonition-icon--solved: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg>');
-  
+  /* Admonition answered */
+  --md-admonition-icon--answered: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg>');
+
   /* Contributor card */
   --contributor-card-size: 7.5rem;
   --contributor-card-size--hover: 8rem;
@@ -426,23 +426,45 @@ hr.content-footer-sep {
   margin-right: 1rem;
 }
 
-/* Begin admonition solved */
-.md-typeset .admonition.solved,
-.md-typeset details.solved {
+/* CUSTOM ADMONITIONS */
+
+.md-typeset .admonition.hidden {
+  display: none;
+}
+
+/* Begin admonition exercise */
+.md-typeset .admonition.exercise,
+.md-typeset details.exercise {
+  border-color: var(--md-primary-fg-color);
+}
+.md-typeset .exercise > .admonition-title,
+.md-typeset .exercise > summary {
+  background-color: var(--md-accent-fg-color--transparent);
+  border-color: var(--md-primary-fg-color);
+}
+.md-typeset .exercise > .admonition-title::before,
+.md-typeset .exercise > summary::before {
+  background-color: var(--md-primary-fg-color);
+}
+/* End admonition exercise */
+
+/* Begin admonition answered */
+.md-typeset .admonition.answered,
+.md-typeset details.answered {
   border-color: #9e9e9e;
 }
-.md-typeset .solved > .admonition-title,
-.md-typeset .solved > summary {
+.md-typeset .answered > .admonition-title,
+.md-typeset .answered > summary {
   background-color: hsla(0, 0%, 62%, 0.1);
   border-color: #9e9e9e;
 }
-.md-typeset .solved > .admonition-title::before,
-.md-typeset .solved > summary::before {
+.md-typeset .answered > .admonition-title::before,
+.md-typeset .answered > summary::before {
   background-color: #9e9e9e;
-  -webkit-mask-image: var(--md-admonition-icon--solved);
-  mask-image: var(--md-admonition-icon--solved);
+  -webkit-mask-image: var(--md-admonition-icon--answered);
+  mask-image: var(--md-admonition-icon--answered);
 }
-/* End admonition solved */
+/* End admonition answered */
 
 /* Start ontributors */
 .md-typeset ul.contributor-list {

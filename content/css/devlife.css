@@ -466,6 +466,12 @@ hr.content-footer-sep {
 }
 /* End admonition answered */
 
+/* Begin admonition calendar */
+.md-typeset .admonition.calendar {
+  display: none;
+}
+/* End admonition calendar */
+
 /* Start ontributors */
 .md-typeset ul.contributor-list {
   display: flex;

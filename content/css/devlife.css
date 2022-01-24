@@ -432,6 +432,10 @@ hr.content-footer-sep {
   display: none;
 }
 
+.admonition.dashboard {
+  display: none;
+}
+
 /* Begin admonition exercise */
 .md-typeset .admonition.exercise,
 .md-typeset details.exercise {

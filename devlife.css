@@ -51,7 +51,7 @@ body {
   color: #404040;
 }
 
-.md-typeset,
+.md-typeset.md-typeset,
 .md-nav,
 .md-tabs__link,
 .md-search__input,
@@ -79,7 +79,7 @@ body {
   max-height: 3rem;
 }
 
-.md-typeset h1 {
+.md-typeset.md-typeset h1 {
   color: #404040;
   border-bottom: 1px solid #404040;
   font-family: "Fira Sans Extra Condensed", sans-serif;
@@ -90,7 +90,7 @@ body {
   padding-bottom: 1.5rem;
 }
 
-.md-typeset h2 {
+.md-typeset.md-typeset h2 {
   color: #404040;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
@@ -98,11 +98,11 @@ body {
   margin: 4rem 0 1rem;
 }
 
-.md-typeset p {
+.md-typeset.md-typeset p {
   margin-bottom: 1rem;
 }
 
-.md-typeset ul {
+.md-typeset.md-typeset ul {
   list-style: disc outside;
   margin-bottom: 1rem;
 }
@@ -121,36 +121,40 @@ body {
   height: 3rem;
 }
 
-.md-typeset .admonition,
-.md-typeset details {
+.md-typeset.md-typeset .admonition,
+.md-typeset.md-typeset details {
   font-size: 1rem;
   margin: 3rem 0;
   padding: 0 2rem;
 }
 
-.md-typeset .admonition-title,
-.md-typeset summary {
+.md-typeset.md-typeset .admonition-title,
+.md-typeset.md-typeset.md-typeset summary {
   margin: 0 -2rem 1.5rem;
   padding: 0.8rem 3rem 0.8rem 4rem;
   border: none;
 }
 
-.md-typeset .admonition-title:before,
-.md-typeset summary:before {
+.md-typeset.md-typeset.md-typeset details:not([open]) > summary {
+  margin-bottom: 0;
+}
+
+.md-typeset.md-typeset .admonition-title:before,
+.md-typeset.md-typeset.md-typeset summary:before {
   left: 2rem;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.md-typeset summary:after {
+.md-typeset.md-typeset.md-typeset summary:after {
   right: 1rem;
   top: 1rem;
   width: 1.2rem;
   height: 1.2rem;
 }
 
-html .md-typeset .admonition > :last-child,
-html .md-typeset details > :last-child {
+html .md-typeset.md-typeset .admonition > :last-child,
+html .md-typeset.md-typeset details > :last-child {
   margin-bottom: 1.2rem;
 }
 
@@ -169,49 +173,49 @@ html .md-typeset details > :last-child {
   margin-right: 0.5rem;
 }
 
-.md-typeset .md-typeset__table.full-width {
+.md-typeset.md-typeset .md-typeset__table.full-width {
   width: 100%;
 }
 
-.md-typeset .md-typeset__table {
+.md-typeset.md-typeset .md-typeset__table {
   margin: 1rem auto 1.5rem;
 }
 
-.md-typeset .md-typeset__table table {
+.md-typeset.md-typeset .md-typeset__table table {
   font-size: 0.9rem;
   border: 0.05rem solid var(--md-default-fg-color);
 }
 
-.md-typeset .table-alternating tbody tr:nth-child(even) {
+.md-typeset.md-typeset .table-alternating tbody tr:nth-child(even) {
   background-color: var(--md-table-row-color);
 }
 
-.md-typeset .table-alternating-cols td:nth-child(even) {
+.md-typeset.md-typeset .table-alternating-cols td:nth-child(even) {
   background-color: var(--md-table-row-color);
 }
 
-.md-typeset table.table-compact tr {
+.md-typeset.md-typeset table.table-compact tr {
   padding: 0 0.5rem;
 }
 
-.md-typeset table.table-compact td {
+.md-typeset.md-typeset table.table-compact td {
   padding: 0.5rem;
 }
 
-.md-typeset table.table-centered td {
+.md-typeset.md-typeset table.table-centered td {
   text-align: center;
 }
 
-.md-typeset table.table-row-col-header th {
+.md-typeset.md-typeset table.table-row-col-header th {
   background-color: var(--md-table-row-color);
 }
 
-.md-typeset table.table-last-col-total td:last-child,
-.md-typeset table.table-last-col-total th:last-child {
+.md-typeset.md-typeset table.table-last-col-total td:last-child,
+.md-typeset.md-typeset table.table-last-col-total th:last-child {
   font-weight: bold;
 }
 
-.md-typeset table.table-same-width {
+.md-typeset.md-typeset table.table-same-width {
   table-layout: fixed;
 }
 
@@ -226,17 +230,17 @@ html .md-typeset details > :last-child {
     margin-top: 0;
   }
 
-  .md-typeset .admonition,
-  .md-typeset details {
+  .md-typeset.md-typeset .admonition,
+  .md-typeset.md-typeset details {
     padding: 0 1rem;
   }
 
-  .md-typeset .admonition-title,
-  .md-typeset summary {
+  .md-typeset.md-typeset .admonition-title,
+  .md-typeset.md-typeset summary {
     margin: 0 -2rem 1rem -2.2rem;
   }
 
-  .md-typeset .admonition .admonition {
+  .md-typeset.md-typeset .admonition .admonition {
     margin: 0 -1rem;
   }
 }
@@ -246,11 +250,11 @@ html .md-typeset details > :last-child {
     padding: 1.5rem 1.5rem 1.2rem;
   }
 
-  .md-typeset h1 {
+  .md-typeset.md-typeset h1 {
     font-size: 2rem;
   }
 
-  .md-typeset h2 {
+  .md-typeset.md-typeset h2 {
     font-size: 1.17rem;
   }
 }
@@ -288,8 +292,8 @@ html .md-typeset details > :last-child {
     text-align: center;
   }
 
-  .md-typeset .admonition,
-  .md-typeset details {
+  .md-typeset.md-typeset .admonition,
+  .md-typeset.md-typeset details {
     border: 0.2rem solid #448aff;
   }
 
@@ -423,12 +427,12 @@ hr.content-footer-sep {
 
 .user__container {
   margin-left: 1rem;
-  margin-right: 1rem;
+  padding-right: 0.4rem;
 }
 
 /* CUSTOM ADMONITIONS */
 
-.md-typeset .admonition.hidden {
+.md-typeset.md-typeset .admonition.hidden {
   display: none;
 }
 
@@ -436,34 +440,38 @@ hr.content-footer-sep {
   display: none;
 }
 
+.admonition.auth {
+  display: none;
+}
+
 /* Begin admonition exercise */
-.md-typeset .admonition.exercise,
-.md-typeset details.exercise {
+.md-typeset.md-typeset .admonition.exercise,
+.md-typeset.md-typeset details.exercise {
   border-color: var(--md-primary-fg-color);
 }
-.md-typeset .exercise > .admonition-title,
-.md-typeset .exercise > summary {
+.md-typeset.md-typeset .exercise > .admonition-title,
+.md-typeset.md-typeset .exercise > summary {
   background-color: var(--md-accent-fg-color--transparent);
   border-color: var(--md-primary-fg-color);
 }
-.md-typeset .exercise > .admonition-title::before,
-.md-typeset .exercise > summary::before {
+.md-typeset.md-typeset .exercise > .admonition-title::before,
+.md-typeset.md-typeset .exercise > summary::before {
   background-color: var(--md-primary-fg-color);
 }
 /* End admonition exercise */
 
 /* Begin admonition answered */
-.md-typeset .admonition.answered,
-.md-typeset details.answered {
+.md-typeset.md-typeset .admonition.answered,
+.md-typeset.md-typeset details.answered {
   border-color: #9e9e9e;
 }
-.md-typeset .answered > .admonition-title,
-.md-typeset .answered > summary {
+.md-typeset.md-typeset .answered > .admonition-title,
+.md-typeset.md-typeset .answered > summary {
   background-color: hsla(0, 0%, 62%, 0.1);
   border-color: #9e9e9e;
 }
-.md-typeset .answered > .admonition-title::before,
-.md-typeset .answered > summary::before {
+.md-typeset.md-typeset .answered > .admonition-title::before,
+.md-typeset.md-typeset .answered > summary::before {
   background-color: #9e9e9e;
   -webkit-mask-image: var(--md-admonition-icon--answered);
   mask-image: var(--md-admonition-icon--answered);
@@ -471,20 +479,20 @@ hr.content-footer-sep {
 /* End admonition answered */
 
 /* Begin admonition calendar */
-.md-typeset .admonition.calendar {
+.md-typeset.md-typeset .admonition.calendar {
   display: none;
 }
 /* End admonition calendar */
 
 /* Start ontributors */
-.md-typeset ul.contributor-list {
+.md-typeset.md-typeset ul.contributor-list {
   display: flex;
   flex-wrap: wrap;
   margin: 2rem 0 4rem;
   padding: 0;
 }
 
-.md-typeset ul li.contributor {
+.md-typeset.md-typeset ul li.contributor {
   position: relative;
   list-style: none;
   width: var(--contributor-card-size);
@@ -493,7 +501,7 @@ hr.content-footer-sep {
   padding: 0;
 }
 
-.md-typeset ul li.contributor .contributor-content {
+.md-typeset.md-typeset ul li.contributor .contributor-content {
   position: absolute;
   top: 0;
   left: 0;
@@ -511,7 +519,7 @@ hr.content-footer-sep {
   box-shadow: 4px 4px 6px 0px rgba(61, 61, 61, 0.4);
 }
 
-.md-typeset ul li.contributor .contributor-content:hover {
+.md-typeset.md-typeset ul li.contributor .contributor-content:hover {
   position: absolute;
   top: calc(
     (var(--contributor-card-size) - var(--contributor-card-size--hover)) / 2
